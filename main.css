@@ -136,7 +136,7 @@ header .into-head{
         color: #ff5722;
         box-shadow: 12px 0px 0px #ff5722, -12px 0px 0px #03a9f4;
         margin: 40px auto;
-        padding: 6% 0%;
+        padding: 13% 0%;
         width: 200px;
         height: 200px;
         font-size: 20px;
@@ -362,19 +362,80 @@ header .into-head{
 
     /* -- start Right side bar  ---- - */
 
-.Right{
-
-    margin:5px ;
-    background-color: #4e4e4e;  
-    padding: 10px;       
-    display: flex;
+aside{
+    margin: 5px;
+    background-color: #4e4e4e;
+    padding: 10px;
     width: 29.5%;
-    color: white;
-    justify-content: center;
-    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+   
+
+}
+
+h2{
+
+padding: 10px;
+margin: 10px;
+text-align: center;
+color: white;
+font-weight:bold;
 
 
 }
+
+.gradient{
+
+    text-align: center;
+    background-color: rgb(202, 202, 202);
+    color: white;
+    font-weight: bold;
+    width: 83%;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    position: relative;
+    letter-spacing: 4px;
+
+
+}
+
+.fl{ 
+    
+    color: #f44336;
+    font-weight: bold;
+    font-size: 35px;
+    
+    }
+
+
+.gradient::before{
+
+    content: "";
+    width: 107%;
+    height: 87px;
+    background-image: linear-gradient( to right ,
+             #f44336 20% , 
+             #2196f3 20% , 
+             #2196f3 40% , 
+             #4caf50 40% , 
+             #4caf50 60% , 
+             #e91e63 60% , 
+             #e91e63 80% , 
+             #673ab7 80% );
+
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    z-index: -1;
+
+}
+
+
+
 
 
 
