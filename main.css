@@ -1,8 +1,8 @@
 *{
 
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     margin: 0px;
-
+    
 
  }
 
@@ -112,9 +112,6 @@ header .into-head{
     margin:5px ;
     background-color: #4e4e4e;  
     padding: 10px;       
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 69%;
 
 }
@@ -136,9 +133,8 @@ header .into-head{
         color: #ff5722;
         box-shadow: 12px 0px 0px #ff5722, -12px 0px 0px #03a9f4;
         margin: 40px auto;
-        padding: 13% 0%;
+        padding: 8% 0%;
         width: 200px;
-        height: 200px;
         font-size: 20px;
         font-weight: bold;
     
@@ -370,18 +366,18 @@ aside{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 0;
+    z-index: -1;
    
 
 }
 
 h2{
 
-padding: 10px;
-margin: 10px;
-text-align: center;
-color: white;
-font-weight:bold;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-weight:bold;
 
 
 }
@@ -433,6 +429,641 @@ font-weight:bold;
     z-index: -1;
 
 }
+
+
+/* *****asss2-Task 13******* */
+
+.ass-2-parent{
+
+    display:flex;
+    justify-content:center;
+    flex-flow: column nowrap;
+    width: 90%;
+
+}
+
+.in-parent{
+    width: 90%;
+    margin:20px auto ;
+    position:relative;
+
+}
+
+
+
+.in-parent::after{
+    content: "";
+    width: 22.5vw;
+    height: 5px;
+    background-image: linear-gradient(to right ,#f44336 ,#f44336 50% ,#009688 50%,#009688);
+    position: absolute;
+    bottom: -2%;
+    left: 0%;
+}
+    
+
+ .input-text{
+    width: 100%;
+    border:none;
+    caret-color: red;
+    height:60px;
+    background-color: #d4d4d4;
+    font-size: 20px;
+    color: rgb(10, 168, 173) ;  
+}
+
+
+/* *************Task-14********** */
+
+
+/* ******ass.1***** */
+
+.grid{
+    
+    background-color: #ddd;
+    padding: 20px;
+    width: 90%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 150px;
+    gap: 5px;
+}
+
+
+.grid div{
+
+background-color: #607d8b;
+padding: 5px;
+color: white;
+display: flex;
+justify-content: center;
+align-items:center;
+
+}
+
+.Element-1,
+.Element-2,
+.Element-3,
+.Element-4,
+.Element-5,
+.Element-6::before{
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+ }
+
+
+ .Element-1::before{content: "Element 1";}
+ .Element-2::before{content: "Element 2";}
+ .Element-3::before{content: "Element 3";}
+ .Element-4::before{content: "Element 4";}
+ .Element-5::before{content: "Element 5";}
+ .Element-6::before{content: "Element 6";}
+
+
+/* ********ass.2******** */
+
+.layout{ 
+
+margin: 20px auto;    
+width: 80%;
+height: 1   00vh;
+display: grid;
+grid-template-columns: repeat(10,1fr);
+grid-template-rows: 50px 200px 50px;
+grid-template-areas: 
+    " head head head head head head head head head head "
+    " cont cont cont cont cont cont cont aside aside aside "
+    " foot foot foot foot foot foot foot foot foot foot  ";
+
+}
+ .head,
+ .sec-cont,
+ .aasidee,
+ .fooot{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold;
+
+ }
+
+
+ .head{
+    grid-area:head;  
+    background-color:#03a9f4 ;
+
+ }
+ .sec-cont{
+    grid-area:cont;  
+    background-color:#ff5722 ;
+
+ }
+ .aasidee{
+    grid-area:aside;  
+    background-color:#607d8b ;
+
+ }
+ .fooot{
+    grid-area:foot;  
+    background-color:#009688 ;
+
+ }
+ 
+
+ .head::before{ content: "Header";font-weight: bold;}
+ 
+ .sec-cont::before{content: "Section";font-weight: bold;}
+ 
+ .aasidee::before{content: "Aside";font-weight: bold;}
+ 
+ .fooot::before{content: "Footer";font-weight: bold; }
+
+
+
+
+/* ********ass.3******** */
+
+
+ .grid-ass3{
+
+    background-color: #ddd;
+    padding: 15px;
+    width: 95%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 300px 20px;
+    gap: 5px;
+
+}
+
+
+.grid-ass3 div{
+
+    background-color: #8bc34a;
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold   ;
+
+}
+
+
+/* ********ass.4******** */
+
+
+.grid-ass4{
+
+    background-color: #fffafac2;
+    width: 90%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7,1fr);
+    gap: 15px;
+    padding: 10px;
+
+
+}
+
+.grid-ass4 div {
+
+    background-color:#2196f3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+
+.onee{ grid-area: 6/span 3 ;}
+.twoo{grid-area:2/ span 2 ;}
+.fivee{ grid-area: 6/2/3/4;}
+.eightt{grid-area:1/ span 3 ;}
+
+
+
+/* ********ass.5******** */
+
+.grid-ass5{
+    padding: 10px;
+    background-color:#ddd;
+    width: 90%;
+    height:300px;
+    display: grid;    
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: 20px;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 10px;
+
+
+}
+
+
+
+.grid-ass5 div{
+
+    background-color:#e91e63;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+
+
+}
+
+
+
+
+/* ********callange-1******** */
+
+.grid-ass6{
+
+    margin: 23px auto;
+    background-color: #ddd;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(13,1fr);
+    gap: 10px;
+    width: 97%;
+  
+
+
+}
+
+.grid-ass6 div{
+
+    padding: 20px; 
+    position: relative;
+    overflow: hidden;
+   
+
+}
+
+.grid-ass6 div p{
+    overflow: hidden;
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+
+
+
+/* ****paragraph one**** */
+.i{
+
+    grid-area:1/1/4/3;
+    background-color:white;
+    color: black;
+
+}
+
+.i::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+.i p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 12%;
+ right: 2%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+
+
+/* ****paragraph two**** */
+
+.ii{   
+    
+    grid-area:1/3/4/3;
+    background-color:white;
+    color: black;
+
+}
+
+.ii::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.ii p::after {
+    content: "''";
+ width: 8%;
+ height: 3%;
+ position: absolute;
+ bottom: 12%;
+ right: 11%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+/* ****paragraph three **black**** */
+.iii{
+
+
+    grid-area: 1/4/10/4;
+    background-color: black;
+    color: white;
+}
+
+.iii::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 0.3%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.iii p{
+    color: white;
+    line-height: 26px;
+
+
+}
+
+.iii p::after {
+       content: "''";
+    width: 12%;
+    height: 4%;
+    position: absolute;
+    bottom: 1%;
+    right: 20%;
+    color: #b3b3b3a8;
+    font-size: 65px;
+    transform: rotate(20deg);
+}
+
+
+/* ****pargraph Four*** */
+
+.iv{
+
+    
+    grid-area:4/1/10/1;
+    background-color:white;
+    color: black;
+
+}
+
+.iv::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 0.3%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.iv p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 6%;
+ right: 11%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+/* ****pargraph Five ***black**** */
+
+.v{
+    grid-area: 4/4/7/2;
+    background-color:black;
+    color: white;
+
+}
+
+.v::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.v p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 12%;
+ right: 2%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+/* ****pargraph Six**** */
+
+.vi{
+    grid-area: 7/4/10/2;
+    background-color:white;
+    color: black;
+
+}
+
+.vi::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.vi p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 12%;
+ right: 2%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+
+/* ****pargraph Seven**** */
+
+
+.vii{
+
+    grid-area:10 /2/14/1;
+    background-color:white;
+    color: black;
+
+}
+
+.vii::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.vii p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 12%;
+ right: 2%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+/* ****pargraph eight black**** */
+.viii{
+    grid-area:10/3/14/2;
+    background-color:black;
+    color: white; 
+
+}
+
+.viii::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.viii p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 12%;
+ right: 2%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+/* ****pargraph naighn**** */
+
+.ix{
+
+    grid-area: 10/3/14/3;
+    background-color:white;
+    color: black;
+
+}
+
+.ix::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.ix p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 12%;
+ right: 2%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+
+/* ****pargraph Ten**** */
+
+
+.x{
+
+  
+    grid-area:10 /4 /14 /4;
+    background-color:white;
+    color: black;
+
+}
+
+.x::before {
+    content: "";
+    background: red;
+    width: 100%;
+    height: 1%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.x p::after {
+    content: "''";
+ width: 12%;
+ height: 4%;
+ position: absolute;
+ bottom: 12%;
+ right: 2%;
+ color: #b3b3b3a8;
+ font-size: 65px;
+ transform: rotate(20deg);
+}
+
+
+
+
+
+
+
+
 
 
 
