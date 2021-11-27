@@ -972,6 +972,140 @@ transform:scale(1.1)  rotatex(-180deg);
 
 
 
+/* ******assignment-17******** */
+
+    /* ******Task-one***** */
+
+    .ass-17-1{
+        margin: 30px auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid #e91e63;
+        border-right: 5px solid transparent;
+        background-color: #fff;
+        position: relative;
+        animation: move 1s  infinite   linear;
+
+ }
+
+ .ass-17-1 div::before{
+
+    content: '';
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 5px solid #03a9f4;
+    border-left: 5px solid transparent;
+    position: absolute;
+    top: -31%;
+    left: -29%;
+
+
+ }
+
+ .ass-17-1 div::after{
+    content: '';
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid #f4e403;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -50%;
+    right: -51%;
+ 
+
+ }
+
+@keyframes move {
+
+0%{
+
+    transform: rotate(0turn);
+
+}
+
+100%{
+
+    transform: rotate(1turn);
+
+}
+
+
+}
+
+.ass-17-1:hover{animation-play-state: paused;}
+.ass-17-1:hover div::before{animation-play-state: paused;}
+.ass-17-1:hover div::after{animation-play-state: paused;}
+
+
+    /* ******Task-two***** */
+
+    .ass-17-2{
+        margin: 30px auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid #2196f3;
+        border-right: 5px solid transparent;
+        background-color: #fff;
+        position: relative;
+        animation: move 1s  infinite  paused linear;
+
+ }
+
+ .ass-17-2 div::before{
+
+    content: '';
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 5px solid #ffee00;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -31%;
+    left: -29%;
+
+
+ }
+
+ .ass-17-2 div::after{
+    content: '';
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid #000000;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -50%;
+    right: -51%;
+ 
+
+ }
+
+@keyframes move {
+
+0%{
+
+    transform: rotate(0turn);
+
+}
+
+100%{
+
+    transform: rotate(1turn);
+
+}
+
+
+}
+
+.ass-17-2:hover{animation:move 1s infinite linear}
+.ass-17-2:hover div::before{animation:move 2s infinite linear}
+.ass-17-2:hover div::after{animation:move 3s linear infinite;}
+
+
 
 
 
